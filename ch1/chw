@@ -1,0 +1,15 @@
+#!/bin/bash
+#: Title : chw
+#: Date : 2024-01-29
+#: Author : "Carlos Zamora"
+#: Version : 1.0
+#: Description : create a script file named hw in the $HOME/bpl/bin/ directory, and execute it
+#: Options : None
+
+file="$HOME/bpl/bin/hw"
+
+bpl
+echo "#!/bin/bash" > $file
+echo 'printf "%s\n" "Hello, World!"' >> $file
+chmod +x $file
+bash $file
