@@ -1,0 +1,10 @@
+#!/bin/bash
+#: Title : bpl
+#: Date : 2024-01-29
+#: Author : "Carlos Zamora"
+#: Version : 1.0
+#: Description : create a directory named bpl inside $HOME with two subdirectories, bin and scripts
+#: Options : None
+
+mkdir -p "$HOME/bpl/bin"
+mkdir -p "$HOME/bpl/scripts"
