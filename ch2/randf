@@ -1,0 +1,16 @@
+#!/bin/bash
+#: Title : randf
+#: Date : 2024-01-29
+#: Author : "Carlos Zamora"
+#: Version : 1.0
+#: Description : generate random numbers and store them in a variable and a file
+#: Options : None
+
+printf -v variable "%5d.%-5d\n" \
+	$RANDOM $RANDOM \
+	$RANDOM $RANDOM \
+	$RANDOM $RANDOM \
+	$RANDOM $RANDOM
+
+printf "%s" "$variable" > rand_numbers.txt
+
