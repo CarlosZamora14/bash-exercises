@@ -1,0 +1,21 @@
+#!/bin/bash
+#: Title : fne
+#: Date : 2024-01-30
+#: Author : "Carlos Zamora"
+#: Version : 1.0
+#: Description : ask for a filename until the user enter a file that exists
+#: Options : None
+
+printf -v request_file "%s: " "Please enter a filename"
+
+while true; do
+    printf "%s" "$request_file"
+    read filename
+
+    if test -e "$filename"; then
+	printf "The file %s does exist!\n" "$filename"
+	exit 0
+    else
+	printf "The file %s does not exist. Please try again.\n" "$filename"
+    fi
+done
