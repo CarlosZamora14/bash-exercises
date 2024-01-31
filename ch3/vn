@@ -1,0 +1,30 @@
+#!/bin/bash
+#: Title : vn
+#: Date : 2024-01-30
+#: Author : "Carlos Zamora"
+#: Version : 1.0
+#: Description : ask for user input until a number between 20 and 30 is given
+#: Options : None
+
+while true; do
+    printf "%s: " "Please insert a number between 20 and 30"
+    read number
+
+    case $number in
+	"") printf "%s\n" "Your input cannot be empty." >&2
+	continue
+	;;
+	*[!0-9]*) printf "%s\n" "Invalid input, expected an integer number." >&2
+	continue
+	;;
+    esac
+
+    if test $number -lt 20; then
+	printf "The number %d is too low. Please try again.\n" $number >&2
+    elif test $number -gt 30; then
+	printf "The number %d is too big. Please try again.\n" $number >&2
+    else
+	printf "You entered the number %d\n" $number
+	exit 0
+    fi
+done
