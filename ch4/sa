@@ -1,0 +1,12 @@
+#!/bin/bash
+#: Title : sa
+#: Date : 2024-02-01
+#: Author : "Carlos Zamora"
+#: Version : 1.0
+#: Description : print each argument in a separate line
+#: Options : None
+
+pre=:
+post=:
+
+printf "$pre%s$post\n" "$@"
